@@ -40,7 +40,7 @@ resource "aws_instance" "this" {
     # Due to several known issues in Terraform AWS provider related to arguments of aws_instance:
     # (eg, https://github.com/terraform-providers/terraform-provider-aws/issues/2036)
     # we have to ignore changes in the following arguments
-    ignore_changes = ["user_data", "private_ip", "root_block_device"]
+    ignore_changes = ["ami", "subnet_id", "user_data", "private_ip", "root_block_device"]
   }
 }
 
@@ -83,6 +83,6 @@ resource "aws_instance" "this_t2" {
     # Due to several known issues in Terraform AWS provider related to arguments of aws_instance:
     # (eg, https://github.com/terraform-providers/terraform-provider-aws/issues/2036)
     # we have to ignore changes in the following arguments
-    ignore_changes = ["user_data", "private_ip", "root_block_device"]
+    ignore_changes = ["ami", "subnet_id", "user_data", "private_ip", "root_block_device"]
   }
 }
